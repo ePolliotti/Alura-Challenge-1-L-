@@ -70,6 +70,7 @@ main{
 }
 
 .contenedor-texto-resultado p{
+    
     font-size: 90%;
     color: #495057;
     margin: 15px 30px;
@@ -90,6 +91,9 @@ main{
     background: none;
     color: #0A3871;
     outline: none;
+    width: 350px; 
+    height: 350px;
+    border: none;
 }
 .muñeco{
     width: 90%;
