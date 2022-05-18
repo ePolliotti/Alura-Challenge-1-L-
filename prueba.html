@@ -4,50 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>encriptador</title>
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div id="general">
-        <div id="logo">
-            <div id="vector">
-                <img src="img/Vector.png" alt="">
-            </div>
-            
-        </div>
-         <textarea class="titulo" name="textarea" rows="10" cols="50">Ingrese el texto aquí</textarea>
+<main>
+    <img src="./img/Vector.png" alt="Logo" class="logo">
+
+    <div id="error" class="invisible">
+    No se admiten letras en mayúscula ni acentos. Por favor, ingrese únicamente letras minúsculas sin acentos.
+    </div>
+    <textarea id="texto-ingresado" name="textarea" cols="40" rows="10"  placeholder="Ingrese el texto aquí"  required></textarea>
+
+   <div class="contenedor-texto-resultado"> 
+       <textarea class="invisible" id="texto-resultado" cols="48" rows="30" style="width: 350px; height: 350px; border: none" readonly></textarea>
+       <button class="invisible" id="btn-copiar">Copiar</button>
+       <p class="invisible" id="pegar">¡Copiado!(Presione Ctrl+V para pegar el texto)</p>
+       <div id="muñeco-texto">
+           <img src="./img/Muñeco.png" alt="muñeco" class="muñeco">
+           <h3>Ningún mensaje fue encontrado.</h3>
+           <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+       </div>
+       
+   </div>
         
-         <div id="alert">
-             <img id="icono" src="img/alert.png" alt="">
-             <p id="textAlert">solo letras minúsculas y sin acentos</p>
-
-         </div>
-         <div id="botones">
-            <button id="boton">
-                <p id="textoBoton">
-                    Encriptar
-                <p>
-            </button>
-            <button id="boton2">
-                <p id="textoBoton2">
-                    Desencriptar
-                <p>
-            </button>
-
-            
-        </div>
-        <div class="rectangulo">
-           
-        </div>
-        <div id="muñeco">
-            <img src="img/Muñeco.png" alt="">
-        </div>
-        <div id="textoRectangulo">
-            <p id="msj"> Ningun mensaje fue <br> encontrado</p>
-            <p id="msj2">ingrese el texto que desea encriptar o <br> desencriptar</p>
-        </div>
+   <div class="botones">
+    <p class="exclamation"><img src="./img/alert.png" alt="">Solo letras minúsculas y sin acentos</p>
+    <button id="btn-encriptar">Encriptar</button>
+    <button id="btn-desencriptar">Desencriptar</button>
 </div>
+</main>
+
+
+<footer>
+    &copy Emilio Polliotti - 2022 - AluraChallenge
+</footer>
     
+<script src="script.js"></script>
+
 </body>
 </html>
+
